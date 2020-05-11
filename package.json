@@ -13,7 +13,6 @@
     "cli": "vis-tree",
     "build": "tsc",
     "test": "mocha -r ts-node/register test/**/*.test.ts",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "lint": "tslint -c tslint.json '{test,src}/**/*.ts'",
     "prettier-format": "prettier --config .prettierrc ./**/*.{js,jsx} --write"
   },
