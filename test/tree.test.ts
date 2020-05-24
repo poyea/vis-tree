@@ -2,8 +2,13 @@ import { randomTree } from '../src/tree'
 import { expect } from 'chai'
 
 describe('Function for generating random arrays', () => {
-  it('should return arrays of length 7', () => {
-    expect(randomTree()).to.have.deep.property('length', 7)
+
+  it('should have non null root', () => {
+    expect(randomTree()).to.not.equal(['null'])
+  })
+
+  it('should return arrays of length 8', () => {
+    expect(randomTree()).to.have.deep.property('length', 8)
   })
 
   
@@ -17,4 +22,5 @@ describe('Function for generating random arrays', () => {
 
     done()
   })
+
 })
