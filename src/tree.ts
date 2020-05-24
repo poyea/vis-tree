@@ -1,5 +1,5 @@
 export function randomTree(
-    N: number = 7,
+    N: number = 8,
     lower: number = -1e9,
     upper: number = 1e9,
     requireBST: boolean = false,
@@ -12,17 +12,17 @@ export function randomTree(
     }
 
     const _outputArray = []
+    for(let i = 0; i < N; ++i){
+      _outputArray.push('null')
+    }
+
     for (let i = 0; i < N; i++) {
-        const _chknull: boolean = Math.floor(Math.random() * 11) % 2 == 0;
-        if(_chknull){
-            _outputArray.push('null')
-        }else{
-            _outputArray.push(
-                Math.floor(Math.random() * (upper.valueOf() + 1 - lower.valueOf())) +
-                  lower.valueOf()
-              )
+        let _chknull: boolean = Math.floor(Math.random() * 3) == 0;
+        if(i == 0 || (!_chknull && _outputArray[Math.floor(i-1)/2] != 'null')){
+            _outputArray[i] = Math.floor(Math.random() * (upper.valueOf() + 1 - lower.valueOf())) + lower.valueOf()
         }
     }
+
     if (requireBST) {
       //TODO
     }

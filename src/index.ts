@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { randomArray } from './array'
+import { randomTree } from './tree'
 const chalk = require('chalk')
 const clear = require('clear')
 const figlet = require('figlet')
@@ -51,4 +52,8 @@ if (!program.low && !program.high && !program.size) {
 
 if (program.array) {
   console.log(`[${randomArray(N, min, max, sorted, rsorted)}]`)
+}
+
+if (program.tree) {
+  console.log(`[${randomTree()}]`)
 }
