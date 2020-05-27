@@ -6,25 +6,25 @@ export function randomArray(
   requireRSort: boolean = false
 ): number[] {
   if (N == null || !Number.isInteger(N)) {
-    throw new TypeError('array: N must be an integer')
+    throw new TypeError('array: N must be an integer');
   }
   if (N < 0) {
-    throw new RangeError('array: N must be non-negative')
+    throw new RangeError('array: N must be non-negative');
   }
   if (lower > upper) {
-    throw new RangeError('array: lower must be less than upper')
+    throw new RangeError('array: lower must be less than upper');
   }
-  const _outputArray = []
+  const _outputArray = [];
   for (let i = 0; i < N; i++) {
     _outputArray.push(
       Math.floor(Math.random() * (upper.valueOf() + 1 - lower.valueOf())) +
         lower.valueOf()
-    )
+    );
   }
   if (requireSort) {
-    _outputArray.sort((a, b) => a - b)
-  }else if (requireRSort) {
-    _outputArray.sort((a, b) => b - a)
+    _outputArray.sort((a, b) => a - b);
+  } else if (requireRSort) {
+    _outputArray.sort((a, b) => b - a);
   }
-  return _outputArray
+  return _outputArray;
 }

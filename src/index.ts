@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-import { randomArray } from './array'
-import { randomTree } from './tree'
-const chalk = require('chalk')
-const clear = require('clear')
-const figlet = require('figlet')
-const path = require('path')
-const program = require('commander')
+import { randomArray } from './array';
+import { randomTree } from './tree';
+const chalk = require('chalk');
+const clear = require('clear');
+const figlet = require('figlet');
+const path = require('path');
+const program = require('commander');
 
 console.log(
   chalk.blue(
     figlet.textSync('vis-tree', { font: 'Epic', horizontalLayout: 'full' })
   )
-)
+);
 
 program
   .name('vis-tree')
@@ -25,35 +25,35 @@ program
   .option('-l, --low <integer>', 'set value of minimum element', '-1e9')
   .option('-h, --high <integer>', 'set value of maximum element', '1e9')
   .option('-N <integer>', 'set length/size of output', '10')
-  .parse(process.argv)
+  .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
-  program.outputHelp()
+  program.outputHelp();
 }
 
 let min: number = -1e9,
   max: number = 1e9,
   N: number = 10,
   sorted: boolean = false,
-  rsorted: boolean = false
-min = program.low ? Number(program.low) : min
-max = program.high ? Number(program.high) : max
-N = program.size ? Number(program.size).valueOf() : N
-sorted = program.sorted ? true : false
-rsorted = program.rsorted ? true : false
+  rsorted: boolean = false;
+min = program.low ? Number(program.low) : min;
+max = program.high ? Number(program.high) : max;
+N = program.size ? Number(program.size).valueOf() : N;
+sorted = program.sorted ? true : false;
+rsorted = program.rsorted ? true : false;
 
 if (sorted === rsorted && sorted === true) {
-  (sorted = false), (rsorted = false)
+  (sorted = false), (rsorted = false);
 }
 
 if (!program.low && !program.high && !program.size) {
-  console.log('You have to at least specify some parameters.')
+  console.log('You have to at least specify some parameters.');
 }
 
 if (program.array) {
-  console.log(`[${randomArray(N, min, max, sorted, rsorted)}]`)
+  console.log(`[${randomArray(N, min, max, sorted, rsorted)}]`);
 }
 
 if (program.tree) {
-  console.log(`[${randomTree()}]`)
+  console.log(`[${randomTree()}]`);
 }
