@@ -23,8 +23,7 @@ export function randomArray(
   }
   if (requireSort) {
     _outputArray.sort((a, b) => a - b)
-  }
-  if (requireRSort) {
+  }else if (requireRSort) {
     _outputArray.sort((a, b) => b - a)
   }
   return _outputArray
