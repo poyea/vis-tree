@@ -14,7 +14,7 @@
     "build": "tsc",
     "test": "mocha -r ts-node/register test/**/*.test.ts",
     "lint": "tslint -c tslint.json '{test,src}/**/*.ts'",
-    "prettier-format": "prettier --config .prettierrc ./**/*.{js,jsx} --write"
+    "prettier-format": "prettier --config .prettierrc ./**/*.{js,jsx,ts} --write"
   },
   "dependencies": {
     "chalk": "^4.0.0",

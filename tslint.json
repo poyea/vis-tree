@@ -5,6 +5,7 @@
   "rules": {
     "eofline": false,
     "quotemark": [true, "single"],
+    "semicolon": [true, "always", "ignore-interfaces"],
     "no-console": false,
     "no-var-requires": false,
     "one-variable-per-declaration": false
