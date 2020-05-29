@@ -19,10 +19,10 @@ export function randomTree(
   requireBST: boolean = false
 ): (string | number | void)[] {
   if (N == null || !Number.isInteger(N)) {
-    throw new TypeError('array: N must be an integer');
+    throw new TypeError('tree: N must be an integer');
   }
   if (N <= 0) {
-    throw new RangeError('array: N must be positive');
+    throw new RangeError('tree: N must be positive');
   }
 
   const _ranArr: number[] = randomArray(N, lower, upper);
