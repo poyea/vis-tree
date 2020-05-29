@@ -3,9 +3,7 @@
 import { randomArray } from './array';
 import { randomTree } from './tree';
 const chalk = require('chalk');
-const clear = require('clear');
 const figlet = require('figlet');
-const path = require('path');
 const program = require('commander');
 
 console.log(
@@ -55,5 +53,5 @@ if (program.array) {
 }
 
 if (program.tree) {
-  console.log(`[${randomTree()}]`);
+  console.log(`[${randomTree(N, min, max)}]`);
 }

@@ -26,9 +26,9 @@ export function randomTree(
   }
 
   const _ranArr: number[] = randomArray(N, lower, upper);
-  let _rootValue: number = _ranArr[0];
+  let _rootValue: number | undefined = _ranArr.pop();
   const root: Node = {
-    value: _rootValue,
+    value: _rootValue!,
     left: undefined,
     right: undefined
   };
