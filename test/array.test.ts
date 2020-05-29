@@ -16,7 +16,7 @@ describe('Function for generating random arrays', () => {
     expect(randomArray(1, 0, 0)).include.members([0]);
   });
 
-  it('should reject bad parameters', (done) => {
+  it('should reject bad parameters', () => {
     expect(() => randomArray(-1)).to.throw(
       RangeError,
       'array: N must be non-negative'
