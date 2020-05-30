@@ -1,5 +1,6 @@
 import { randomArray } from './array';
 import { Node } from './INode';
+import { Z_STREAM_END } from 'zlib';
 
 function treeToArray(root: Node, array: (string | number | void)[]) {
   if (root == undefined && array.length > 0) {
@@ -11,6 +12,7 @@ function treeToArray(root: Node, array: (string | number | void)[]) {
     treeToArray(root.right!, array);
   }
 }
+
 
 export function randomTree(
   N: number = 8,
@@ -26,6 +28,7 @@ export function randomTree(
   }
 
   const _ranArr: number[] = randomArray(N, lower, upper);
+
   let _rootValue: number | undefined = _ranArr.pop();
   const root: Node = {
     value: _rootValue!,
@@ -65,5 +68,12 @@ export function randomTree(
 
   const _outputArray: (string | number | void)[] = [];
   treeToArray(root, _outputArray);
+  for(let i: number = _outputArray.length - 1; i >= 0; i--){
+    if(String(_outputArray[i]) === 'null'){
+      _outputArray.pop();
+    }else{
+      break;
+    }
+  }
   return _outputArray;
 }

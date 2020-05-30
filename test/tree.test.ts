@@ -14,6 +14,14 @@ describe('Function for generating random arrays', () => {
         }).length == 10
       );
     });
+
+    expect(randomTree()).to.satisfy((arr: (string | number | void)[]) => {
+      return (
+        arr.filter((e) => {
+          return e !== 'null';
+        }).length == 8
+      );
+    });
   });
 
   it('should reject bad parameters', () => {
