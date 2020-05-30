@@ -53,5 +53,5 @@ if (program.array) {
 }
 
 if (program.tree) {
-  console.log(`[${randomTree(N, min, max)}]`);
+  console.log(`[${randomTree(N, min, max, sorted)}]`);
 }
