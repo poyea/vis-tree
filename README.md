@@ -1,6 +1,8 @@
 # <p align="center">vis-tree</p>
 <p align="center">Command line tool for generation of data structures.</p>
 
+![Typescript CI](https://github.com/poyea/vis-tree/workflows/Typescript%20CI/badge.svg)
+
 ```
 |\     /|\__   __/(  ____ \       \__   __/(  ____ )(  ____ \(  ____ \
 | )   ( |   ) (   | (    \/          ) (   | (    )|| (    \/| (    \/
