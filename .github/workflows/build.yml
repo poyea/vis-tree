@@ -1,4 +1,4 @@
-name: Full build
+name: Typescript CI
 
 on:
   push:
@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build the cli
+    - name: Lint and test
       run: |
         npm install
         npm run lint
         npm test
-        npm run create
