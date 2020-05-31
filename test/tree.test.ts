@@ -11,7 +11,7 @@ describe('Function for generating random arrays', () => {
       return (
         arr.filter((e) => {
           return e !== 'null';
-        }).length == 10
+        }).length === 10
       );
     });
 
@@ -19,7 +19,7 @@ describe('Function for generating random arrays', () => {
       return (
         arr.filter((e) => {
           return e !== 'null';
-        }).length == 8
+        }).length === 8
       );
     });
   });

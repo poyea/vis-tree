@@ -3,7 +3,7 @@ import { Node } from './INode';
 import { Z_STREAM_END } from 'zlib';
 
 function treeToArray(root: Node, array: (string | number | void)[]) {
-  if (root == undefined && array.length > 0) {
+  if (root === undefined && array.length > 0) {
     array.push('null');
     return;
   } else {
@@ -29,7 +29,7 @@ export function randomTree(
 
   const _ranArr: number[] = randomArray(N, lower, upper);
 
-  let _rootValue: number | undefined = _ranArr.pop();
+  const _rootValue: number | undefined = _ranArr.pop();
   const root: Node = {
     value: _rootValue!,
     left: undefined,
@@ -37,8 +37,8 @@ export function randomTree(
   };
 
   while (_ranArr.length > 0) {
-    let _nodeValue: number | undefined = _ranArr.pop();
-    var _pointNode: Node = root;
+    const _nodeValue: number | undefined = _ranArr.pop();
+    let _pointNode: Node = root;
     while (true) {
       if (_pointNode.value <= _nodeValue! && _pointNode.right === undefined) {
         _pointNode.right = {

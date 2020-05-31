@@ -34,5 +34,29 @@
     "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
     "typescript": "^3.8.3"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poyea/vis-tree.git"
+  },
+  "keywords": [
+    "tree",
+    "array",
+    "data-structures",
+    "data-structure",
+    "generator",
+    "tool",
+    "cli",
+    "ts",
+    "typescript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poyea/vis-tree/issues"
+  },
+  "homepage": "https://github.com/poyea/vis-tree#readme"
 }
