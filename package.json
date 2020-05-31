@@ -18,10 +18,8 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "clear": "^0.1.0",
     "commander": "^5.1.0",
-    "figlet": "^1.4.0",
-    "path": "^0.12.7"
+    "figlet": "^1.4.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

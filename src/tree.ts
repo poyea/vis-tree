@@ -1,6 +1,5 @@
 import { randomArray } from './array';
 import { Node } from './INode';
-import { Z_STREAM_END } from 'zlib';
 
 function treeToArray(root: Node, array: (string | number | void)[]) {
   if (root === undefined && array.length > 0) {
