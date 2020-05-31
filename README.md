@@ -31,6 +31,11 @@ Options:
   --help                display help for command
 ```
 
+## Installation
+```
+npm install -g vis-tree
+```
+
 ## Build from source
 First, you need to clone the project. Then,
 ```
