@@ -1,8 +1,8 @@
+import chalk from 'chalk';
+import program from 'commander';
+import figlet from 'figlet';
 import { randomArray } from './array';
 import { randomTree } from './tree';
-const chalk = require('chalk');
-const figlet = require('figlet');
-const program = require('commander');
 
 program
   .name('vis-tree')
