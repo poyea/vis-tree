@@ -4,7 +4,7 @@
   "jsRules": {},
   "rules": {
     "eofline": false,
-    "quotemark": [true, "single"],
+    "quotemark": [false],
     "semicolon": [true, "always", "ignore-interfaces"],
     "no-console": false,
     "no-var-requires": false,
