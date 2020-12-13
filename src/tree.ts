@@ -12,7 +12,6 @@ function treeToArray(root: Node, array: (string | number | void)[]) {
   }
 }
 
-
 export function randomTree(
   N: number = 8,
   lower: number = -1e9,
@@ -67,10 +66,10 @@ export function randomTree(
 
   const _outputArray: (string | number | void)[] = [];
   treeToArray(root, _outputArray);
-  for(let i: number = _outputArray.length - 1; i >= 0; i--){
-    if(String(_outputArray[i]) === 'null'){
+  for (let i: number = _outputArray.length - 1; i >= 0; i--) {
+    if (String(_outputArray[i]) === 'null') {
       _outputArray.pop();
-    }else{
+    } else {
       break;
     }
   }
